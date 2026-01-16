@@ -3,9 +3,11 @@
 	"name": "Dump Json",
 	"modid": "dumpjson",
 	"version": "1.0.0",
-        "side": "Client",
+  "side": "Universal",
+  "requiredOnClient": false,
+  "requiredOnServer": false,
 	
-	"description" : "Dumps json assets on the client side for debugging.",
+	"description" : "Dumps json assets on both the client and server side for debugging.",
 	"website": "https://github.com/bluelightning32/vs-dumpjson",
 	"authors": [ "bluelightning32" ],
 	

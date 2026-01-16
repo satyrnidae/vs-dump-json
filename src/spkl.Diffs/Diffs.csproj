@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <RootNamespace>spkl.Diffs</RootNamespace>
+    <AssemblyName>spkl.Diffs</AssemblyName>
+    <LangVersion>12.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>Sebastian Fischer</Authors>
+    <Company>Sebastian Fischer</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2024 Sebastian Fischer</Copyright>
+    <RepositoryUrl>https://github.com/spkl/Diffs</RepositoryUrl>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\keys\spkl.Diffs.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <PackageProjectUrl>https://github.com/spkl/Diffs</PackageProjectUrl>
+    <Description>Provides a .NET implementation to the diff algorithm (shortest edit script) described by Eugene Myers in "An O(ND) Difference Algorithm and Its Variations". Unlike some other implementations, this one can compare sequences of any object type, using the standard Equals method or a custom IEqualityComparer.
+
+This project uses Semantic Versioning (https://semver.org/).</Description>
+    <PackageTags>diff diffs difference algorithm ses shortest edit script myers</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageReleaseNotes>- Provided snupkg for debug symbols.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\README.md" Link="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
